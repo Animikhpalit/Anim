@@ -1,0 +1,16 @@
+{
+  "enabled": true,
+  "name": "TSX Comment Review",
+  "description": "When a TSX file is saved, inspects the commenting level and adds comments directly in the file if it doesn't align with best practices.",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      "*.tsx"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "A TSX file was just saved. Inspect the file for its level of code commenting. Evaluate whether the commenting aligns with best practices for React/TSX code:\n- Complex logic, non-obvious decisions, and important component behavior should have explanatory comments\n- Public component props, hooks, and utility functions should be documented\n- Comments should explain the \"why\" not restate the obvious \"what\"\n- Avoid both under-commenting (dense logic with no explanation) and over-commenting (noise on trivial lines)\n\nIf the commenting level is NOT aligned with these best practices, add appropriate comments directly in the file. Preserve all existing code and functionality, only add or adjust comments. If the commenting is already appropriate, make no changes."
+  }
+}
