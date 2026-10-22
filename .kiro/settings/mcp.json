@@ -1,0 +1,21 @@
+{
+  "mcpServers": {
+    "aws-docs": {
+      "command": "C:\\Program Files\\uv\\uvx.exe",
+      "args": [
+        "--from",
+        "awslabs.aws-documentation-mcp-server@latest",
+        "awslabs.aws-documentation-mcp-server.exe"
+      ],
+      "env": {
+        "FASTMCP_LOG_LEVEL": "INFO"
+      },
+      "disabled": false,
+      "autoApprove": [
+    "search_documentation",
+    "read_sections",
+    "read_sections"
+   ]
+    }
+  }
+}

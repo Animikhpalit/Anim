@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+infrastructure/cdk.out/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Logs and temp
+*.log
+synth-output.txt
+infrastructure/synth-output.txt
+
+# OS / editor
+.DS_Store
+Thumbs.db
